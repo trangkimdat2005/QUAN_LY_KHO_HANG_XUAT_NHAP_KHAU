@@ -24,8 +24,8 @@ namespace QLKHXNK.Views.Admin
 
         private void USNhaCungCap_Load(object sender, EventArgs e)
         {
-            listView1.Columns.Add("Mã NCC");
-            listView1.Columns.Add("Tên NCC");
+            listView1.Columns.Add("Mã nhà cung cấp");
+            listView1.Columns.Add("Tên nhà cung cấp");
             listView1.Columns.Add("Số điện thoại");
             listView1.Columns.Add("Email");
             listView1.Columns.Add("Địa chỉ");

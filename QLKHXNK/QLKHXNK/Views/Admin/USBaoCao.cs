@@ -8,21 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLKHXNK.Views.Admin
 {
-    public partial class USHangHoa : UserControl
+    public partial class USBaoCao : UserControl
     {
-
         private readonly IXNKServices _xnkServices;
-
-        public USHangHoa()
+        public USBaoCao()
         {
             InitializeComponent();
             _xnkServices = new XNKServices();
         }
 
-        private void USHangHoa_Load(object sender, EventArgs e)
+        private void USBaoCao_Load(object sender, EventArgs e)
         {
             listView1.Columns.Add("Mã hàng");
             listView1.Columns.Add("Tên hàng");
@@ -71,11 +70,6 @@ namespace QLKHXNK.Views.Admin
                 item.SubItems.Add(hh.TrangThai);
                 listView1.Items.Add(item);
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

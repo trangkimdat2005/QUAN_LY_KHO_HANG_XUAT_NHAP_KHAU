@@ -15,5 +15,24 @@ namespace QLKHXNK.Services
         List<KhachHang> DSKhachHang();
         List<Kho> DSKho();
         List<PhieuNhap> DSPhieuNhap();
+        List<ChiTietPhieuNhap> DSChiTietPhieuNhap();
+        List<PhieuXuat> DSPhieuXuat();
+        List<ChiTietPhieuXuat> DSChiTietPhieuXuat();
+        List<BaoCao> DSBaoCao();
+
+
+        //--------------------------------------------------------
+
+
+        HangHoa GetHangHoa(string MaHH);
+        NhaCungCap GetNhaCungCap(string MaNCC);
+        NhanVien GetNhanVien(string MaNV);
+        KhachHang GetKhachHang(string MaKH);
+        Kho GetKho(string MaKho);
+        PhieuNhap GetPhieuNhap(string MaPN);
+        ChiTietPhieuNhap GetChiTietPhieuNhap(string MaPN, string MaHH);
+        PhieuXuat GetPhieuXuat(string MaPX);
+        ChiTietPhieuXuat GetChiTietPhieuXuat(string MaPX, string MaHH);
+        BaoCao GetBaoCao(string MaBC);
     }
 }

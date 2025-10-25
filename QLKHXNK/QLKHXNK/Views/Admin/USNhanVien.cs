@@ -23,8 +23,8 @@ namespace QLKHXNK.Views.Admin
 
         private void USNhanVien_Load(object sender, EventArgs e)
         {
-            listView1.Columns.Add("Mã NV");
-            listView1.Columns.Add("Tên NV");
+            listView1.Columns.Add("Mã nhân viên");
+            listView1.Columns.Add("Tên nhân viên");
             listView1.Columns.Add("Giới tính");
             listView1.Columns.Add("Số điện thoại");
             listView1.Columns.Add("Email");

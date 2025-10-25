@@ -8,28 +8,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLKHXNK.Views.Admin
 {
-    public partial class USHangHoa : UserControl
+    public partial class USChiTietPhieuNhap : UserControl
     {
-
         private readonly IXNKServices _xnkServices;
-
-        public USHangHoa()
+        public USChiTietPhieuNhap()
         {
             InitializeComponent();
             _xnkServices = new XNKServices();
         }
 
-        private void USHangHoa_Load(object sender, EventArgs e)
+        private void USChiTietPhieuNhap_Load(object sender, EventArgs e)
         {
-            listView1.Columns.Add("Mã hàng");
-            listView1.Columns.Add("Tên hàng");
-            listView1.Columns.Add("Đơn vị");
-            listView1.Columns.Add("Giá bán");
+            listView1.Columns.Add("Mã phiếu nhập");
+            listView1.Columns.Add("Tên hàng hoá");
             listView1.Columns.Add("Số lượng");
-            listView1.Columns.Add("Trạng thái");
+            listView1.Columns.Add("Đơn giá nhập");
+            listView1.Columns.Add("Thành tiền");
 
             LoadListViewData();
             AdjustListViewColumns();
@@ -58,17 +56,16 @@ namespace QLKHXNK.Views.Admin
             listView1.Items.Clear();
 
             // Ví dụ danh sách hàng hóa
-            var dsHangHoa = _xnkServices.DSHangHoa();
+            var DSChiTietPhieuNhap = _xnkServices.DSChiTietPhieuNhap();
 
             // Duyệt danh sách để thêm từng dòng
-            foreach (var hh in dsHangHoa)
+            foreach (var ctpn in DSChiTietPhieuNhap)
             {
-                ListViewItem item = new ListViewItem(hh.MaHH);
-                item.SubItems.Add(hh.TenHH);
-                item.SubItems.Add(hh.DonViTinh);
-                item.SubItems.Add(hh.DonGiaBan.ToString());
-                item.SubItems.Add(hh.SoLuongTon.ToString());
-                item.SubItems.Add(hh.TrangThai);
+                ListViewItem item = new ListViewItem(ctpn.MaPN);
+                item.SubItems.Add(ctpn.HangHoa.TenHH);
+                item.SubItems.Add(ctpn.SoLuong.ToString());
+                item.SubItems.Add(ctpn.DonGiaNhap.ToString());
+                item.SubItems.Add(ctpn.ThanhTien.ToString());
                 listView1.Items.Add(item);
             }
         }
