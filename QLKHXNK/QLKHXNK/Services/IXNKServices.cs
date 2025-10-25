@@ -11,5 +11,9 @@ namespace QLKHXNK.Services
     {
         List<HangHoa> DSHangHoa();
         List<NhaCungCap> DSNhaCungCap();
+        List<NhanVien> DSNhanVien();
+        List<KhachHang> DSKhachHang();
+        List<Kho> DSKho();
+        List<PhieuNhap> DSPhieuNhap();
     }
 }

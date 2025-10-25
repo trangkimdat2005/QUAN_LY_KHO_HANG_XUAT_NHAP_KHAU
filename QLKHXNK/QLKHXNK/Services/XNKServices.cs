@@ -46,5 +46,65 @@ namespace QLKHXNK.Services
                 return new List<NhaCungCap>();
             }
         }
+
+        public List<NhanVien> DSNhanVien()
+        {
+            try
+            {
+                var nhanViens = _context.NhanViens.ToList();
+                return nhanViens;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (you can use a logging framework here)
+                Console.WriteLine($"An error occurred while retrieving NhanVien list: {ex.Message}");
+                return new List<NhanVien>();
+            }
+        }
+
+        public List<KhachHang> DSKhachHang()
+        {
+            try
+            {
+                var khachHangs = _context.KhachHangs.ToList();
+                return khachHangs;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (you can use a logging framework here)
+                Console.WriteLine($"An error occurred while retrieving KhachHang list: {ex.Message}");
+                return new List<KhachHang>();
+            }
+        }
+
+        public List<Kho> DSKho()
+        {
+            try
+            {
+                var khos = _context.Khoes.ToList();
+                return khos;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (you can use a logging framework here)
+                Console.WriteLine($"An error occurred while retrieving Kho list: {ex.Message}");
+                return new List<Kho>();
+            }
+        }
+
+        public List<PhieuNhap> DSPhieuNhap()
+        {
+            try
+            {
+                var phieuNhaps = _context.PhieuNhaps.ToList();
+                return phieuNhaps;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (you can use a logging framework here)
+                Console.WriteLine($"An error occurred while retrieving PhieuNhap list: {ex.Message}");
+                return new List<PhieuNhap>();
+            }
+        }
     }
 }
