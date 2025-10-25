@@ -23,10 +23,10 @@ namespace QLKHXNK.Views.Admin
 
         private void USKhachHang_Load(object sender, EventArgs e)
         {
-            listView1.Columns.Add("Mã KH");
-            listView1.Columns.Add("Tên KH");
+            listView1.Columns.Add("Mã khách hàng");
+            listView1.Columns.Add("Tên khách hàng");
             listView1.Columns.Add("Số điện thoại");
-            listView1.Columns.Add("loại KH");
+            listView1.Columns.Add("loại khách hàng");
 
             LoadListViewData();
             AdjustListViewColumns();
@@ -66,6 +66,11 @@ namespace QLKHXNK.Views.Admin
                 item.SubItems.Add(kh.LoaiKH);
                 listView1.Items.Add(item);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

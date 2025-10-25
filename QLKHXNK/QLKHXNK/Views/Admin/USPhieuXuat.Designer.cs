@@ -1,6 +1,6 @@
 ﻿namespace QLKHXNK.Views.Admin
 {
-    partial class USPhieuNhap
+    partial class USPhieuXuat
     {
         /// <summary> 
         /// Required designer variable.
@@ -86,7 +86,7 @@
             this.tableLayoutPanel4.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.textBox11, 1, 1);
             this.tableLayoutPanel4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(601, 12);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(591, 12);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tableLayoutPanel4.RowCount = 2;
@@ -145,7 +145,7 @@
             this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(316, 12);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(306, 12);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tableLayoutPanel3.RowCount = 3;
@@ -160,7 +160,7 @@
             // 
             this.comboBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(107, 12);
+            this.comboBox4.Location = new System.Drawing.Point(107, 14);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(169, 25);
             this.comboBox4.TabIndex = 11;
@@ -179,9 +179,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(3, 66);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 17);
+            this.label8.Size = new System.Drawing.Size(70, 17);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Ngày nhập:";
+            this.label8.Text = "Ngày xuất:";
             // 
             // label9
             // 
@@ -280,8 +280,8 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.75343F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.24657F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.80556F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.19444F));
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBox3, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.comboBox2, 1, 1);
@@ -297,34 +297,34 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(298, 152);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(288, 152);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(124, 12);
+            this.textBox1.Location = new System.Drawing.Point(109, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(171, 25);
+            this.textBox1.Size = new System.Drawing.Size(176, 25);
             this.textBox1.TabIndex = 11;
             // 
             // comboBox3
             // 
             this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(124, 113);
+            this.comboBox3.Location = new System.Drawing.Point(109, 115);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(171, 25);
+            this.comboBox3.Size = new System.Drawing.Size(176, 25);
             this.comboBox3.TabIndex = 9;
             // 
             // comboBox2
             // 
             this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(124, 62);
+            this.comboBox2.Location = new System.Drawing.Point(109, 64);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(171, 25);
+            this.comboBox2.Size = new System.Drawing.Size(176, 25);
             this.comboBox2.TabIndex = 8;
             // 
             // label1
@@ -333,9 +333,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 17);
+            this.label1.Size = new System.Drawing.Size(94, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mã phiếu nhập:";
+            this.label1.Text = "Mã phiếu xuất:";
             // 
             // label2
             // 
@@ -353,9 +353,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 117);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 17);
+            this.label3.Size = new System.Drawing.Size(100, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Mã nhà cung cấp:";
+            this.label3.Text = "Mã khách hàng:";
             // 
             // groupBox1
             // 
@@ -391,16 +391,16 @@
             this.entityCommand1.EnablePlanCaching = true;
             this.entityCommand1.Transaction = null;
             // 
-            // USPhieuNhap
+            // USPhieuXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Name = "USPhieuNhap";
+            this.Name = "USPhieuXuat";
             this.Size = new System.Drawing.Size(1191, 652);
-            this.Load += new System.EventHandler(this.USPhieuNhap_Load);
+            this.Load += new System.EventHandler(this.USPhieuXuat_Load);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();

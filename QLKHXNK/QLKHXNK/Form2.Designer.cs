@@ -210,6 +210,7 @@
             this.button8.TabIndex = 7;
             this.button8.Text = "CHI TIẾT PHIẾU NHẬP";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button6
             // 
@@ -225,6 +226,7 @@
             this.button6.TabIndex = 5;
             this.button6.Text = "PHIẾU XUẤT";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button9
             // 
@@ -240,6 +242,7 @@
             this.button9.TabIndex = 8;
             this.button9.Text = "CHI TIẾT PHIẾU XUẤT";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button7
             // 

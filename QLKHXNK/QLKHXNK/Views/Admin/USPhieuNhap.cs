@@ -23,10 +23,10 @@ namespace QLKHXNK.Views.Admin
 
         private void USPhieuNhap_Load(object sender, EventArgs e)
         {
-            listView1.Columns.Add("Mã PN");
-            listView1.Columns.Add("Mã NV");
-            listView1.Columns.Add("Mã NCC");
-            listView1.Columns.Add("Mã Kho");
+            listView1.Columns.Add("Mã phiếu nhập");
+            listView1.Columns.Add("Nhân viên");
+            listView1.Columns.Add("Nhà cung cấp");
+            listView1.Columns.Add("Kho");
             listView1.Columns.Add("Ngày Nhập");
             listView1.Columns.Add("Tổng số lượng");
             listView1.Columns.Add("Tổng giá trị");
@@ -65,15 +65,20 @@ namespace QLKHXNK.Views.Admin
             foreach (var pn in dsPhieuNhap)
             {
                 ListViewItem item = new ListViewItem(pn.MaPN);
-                item.SubItems.Add(pn.MaNV);
-                item.SubItems.Add(pn.MaKho);
-                item.SubItems.Add(pn.MaNCC);
+                item.SubItems.Add(pn.NhanVien.TenNV);
+                item.SubItems.Add(pn.Kho.TenKho);
+                item.SubItems.Add(pn.NhaCungCap.TenNCC);
                 item.SubItems.Add(pn.NgayNhap.ToShortDateString());
                 item.SubItems.Add(pn.TongSoLuong.ToString());
                 item.SubItems.Add(pn.TongGiaTri.ToString());
                 item.SubItems.Add(pn.GhiChu);
                 listView1.Items.Add(item);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

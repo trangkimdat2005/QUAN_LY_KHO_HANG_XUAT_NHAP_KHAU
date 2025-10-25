@@ -85,6 +85,24 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IXNKServices.cs" />
     <Compile Include="Services\XNKServices.cs" />
+    <Compile Include="Views\Admin\USBaoCao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\USBaoCao.Designer.cs">
+      <DependentUpon>USBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\USChiTietPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\USChiTietPhieuNhap.Designer.cs">
+      <DependentUpon>USChiTietPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\USChiTietPhieuXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\USChiTietPhieuXuat.Designer.cs">
+      <DependentUpon>USChiTietPhieuXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\USKhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,6 +139,12 @@
     <Compile Include="Views\Admin\USPhieuNhap.Designer.cs">
       <DependentUpon>USPhieuNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin\USPhieuXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\USPhieuXuat.Designer.cs">
+      <DependentUpon>USPhieuXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\DangNhap\FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +166,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Admin\USBaoCao.resx">
+      <DependentUpon>USBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\USChiTietPhieuNhap.resx">
+      <DependentUpon>USChiTietPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\USChiTietPhieuXuat.resx">
+      <DependentUpon>USChiTietPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\USHangHoa.resx">
       <DependentUpon>USHangHoa.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\USPhieuNhap.resx">
       <DependentUpon>USPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\USPhieuXuat.resx">
+      <DependentUpon>USPhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DangNhap\FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
