@@ -18,3 +18,7 @@ D:\code\ky_I_nam_3\Phân tích và thiết kế yêu cầu\QLKHXNK\QLKHXNK\obj\D
 D:\code\ky_I_nam_3\Phân tích và thiết kế yêu cầu\QLKHXNK\QLKHXNK\obj\Debug\QLKHXNK.Views.Admin.USHangHoa.resources
 D:\code\ky_I_nam_3\Phân tích và thiết kế yêu cầu\QLKHXNK\QLKHXNK\obj\Debug\QLKHXNK.Views.Admin.USNhaCungCap.resources
 D:\code\ky_I_nam_3\Phân tích và thiết kế yêu cầu\QLKHXNK\QLKHXNK\obj\Debug\QLKHXNK.Form2.resources
+D:\code\ky_I_nam_3\Phân tích và thiết kế yêu cầu\QLKHXNK\QLKHXNK\obj\Debug\QLKHXNK.Views.Admin.USNhanVien.resources
+D:\code\ky_I_nam_3\Phân tích và thiết kế yêu cầu\QLKHXNK\QLKHXNK\obj\Debug\QLKHXNK.Views.Admin.USKhachHang.resources
+D:\code\ky_I_nam_3\Phân tích và thiết kế yêu cầu\QLKHXNK\QLKHXNK\obj\Debug\QLKHXNK.Views.Admin.USKho.resources
+D:\code\ky_I_nam_3\Phân tích và thiết kế yêu cầu\QLKHXNK\QLKHXNK\obj\Debug\QLKHXNK.Views.Admin.USPhieuNhap.resources

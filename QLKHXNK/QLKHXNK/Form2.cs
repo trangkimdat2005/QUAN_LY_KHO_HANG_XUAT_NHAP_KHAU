@@ -67,5 +67,25 @@ namespace QLKHXNK
         {
             OpenChildUserControl(new USNhaCungCap());
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenChildUserControl(new USNhanVien());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenChildUserControl(new USKhachHang());
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            OpenChildUserControl(new USKho());
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenChildUserControl(new USPhieuNhap());
+        }
     }
 }
