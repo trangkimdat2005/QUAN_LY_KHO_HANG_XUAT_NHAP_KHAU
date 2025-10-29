@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLKHXNK.Views.Admin
 {
@@ -33,24 +32,21 @@ namespace QLKHXNK.Views.Admin
             listView1.Columns.Add("Trạng thái");
 
             LoadListViewData();
-            AdjustListViewColumns();
+            AdjustListViewColumns(listView1);
         }
 
 
         // Điều chỉnh chiều rộng các cột khi kích thước ListView thay đổi
-        private void AdjustListViewColumns()
+        private void AdjustListViewColumns(ListView listView)
         {
-            int totalWidth = listView1.ClientSize.Width; // chiều rộng hiển thị thực tế (trừ thanh cuộn)
-            int columnCount = listView1.Columns.Count;
+            if (listView.Columns.Count == 0) return;
 
-            if (columnCount == 0) return;
-
-            int columnWidth = totalWidth / columnCount;
-
-            foreach (ColumnHeader col in listView1.Columns)
+            listView.BeginUpdate();
+            foreach (ColumnHeader col in listView.Columns)
             {
-                col.Width = columnWidth;
+                col.Width = -2; // auto fit theo nội dung
             }
+            listView.EndUpdate();
         }
 
         // Tải dữ liệu vào ListView từ dịch vụ

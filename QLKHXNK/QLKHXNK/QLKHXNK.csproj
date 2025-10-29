@@ -133,6 +133,12 @@
     <Compile Include="Views\Admin\USNhanVien.Designer.cs">
       <DependentUpon>USNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin\USNhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\USNhapHang.Designer.cs">
+      <DependentUpon>USNhapHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\USPhieuNhap.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\USNhanVien.resx">
       <DependentUpon>USNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\USNhapHang.resx">
+      <DependentUpon>USNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\USPhieuNhap.resx">
       <DependentUpon>USPhieuNhap.cs</DependentUpon>
