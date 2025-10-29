@@ -43,6 +43,8 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -87,8 +89,10 @@
             this.flowLayoutPanel1.Controls.Add(this.button3);
             this.flowLayoutPanel1.Controls.Add(this.button4);
             this.flowLayoutPanel1.Controls.Add(this.button10);
+            this.flowLayoutPanel1.Controls.Add(this.button11);
             this.flowLayoutPanel1.Controls.Add(this.button5);
             this.flowLayoutPanel1.Controls.Add(this.button8);
+            this.flowLayoutPanel1.Controls.Add(this.button12);
             this.flowLayoutPanel1.Controls.Add(this.button6);
             this.flowLayoutPanel1.Controls.Add(this.button9);
             this.flowLayoutPanel1.Controls.Add(this.button7);
@@ -187,7 +191,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 375);
+            this.button5.Location = new System.Drawing.Point(0, 450);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(200, 75);
@@ -203,7 +207,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(0, 450);
+            this.button8.Location = new System.Drawing.Point(0, 525);
             this.button8.Margin = new System.Windows.Forms.Padding(0);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(200, 75);
@@ -219,7 +223,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(0, 525);
+            this.button6.Location = new System.Drawing.Point(0, 675);
             this.button6.Margin = new System.Windows.Forms.Padding(0);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(200, 75);
@@ -235,7 +239,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(0, 600);
+            this.button9.Location = new System.Drawing.Point(0, 750);
             this.button9.Margin = new System.Windows.Forms.Padding(0);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(200, 75);
@@ -251,7 +255,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(0, 675);
+            this.button7.Location = new System.Drawing.Point(0, 825);
             this.button7.Margin = new System.Windows.Forms.Padding(0);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(200, 75);
@@ -266,6 +270,37 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1191, 652);
             this.panel3.TabIndex = 3;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Location = new System.Drawing.Point(0, 375);
+            this.button11.Margin = new System.Windows.Forms.Padding(0);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(200, 75);
+            this.button11.TabIndex = 10;
+            this.button11.Text = "NHẬP HÀNG";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.Transparent;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.Location = new System.Drawing.Point(0, 600);
+            this.button12.Margin = new System.Windows.Forms.Padding(0);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(200, 75);
+            this.button12.TabIndex = 11;
+            this.button12.Text = "XUẤT HÀNG";
+            this.button12.UseVisualStyleBackColor = false;
             // 
             // Form2
             // 
@@ -304,5 +339,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
     }
 }

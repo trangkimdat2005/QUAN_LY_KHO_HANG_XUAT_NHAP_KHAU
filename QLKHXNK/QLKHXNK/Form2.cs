@@ -103,5 +103,9 @@ namespace QLKHXNK
             OpenChildUserControl(new USChiTietPhieuXuat());
         }
 
+        private void button11_Click(object sender, EventArgs e)
+        {
+            OpenChildUserControl(new USNhapHang());
+        }
     }
 }

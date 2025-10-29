@@ -49,3 +49,5 @@ D:\code\ky_I_nam_3\Phân tích và thiết kế yêu cầu\BTL\QUAN_LY_KHO_HANG_
 D:\code\ky_I_nam_3\Phân tích và thiết kế yêu cầu\BTL\QUAN_LY_KHO_HANG_XUAT_NHAP_KHAU\QLKHXNK\QLKHXNK\obj\Debug\QLKHXNK.Views.Admin.USPhieuXuat.resources
 D:\code\ky_I_nam_3\Phân tích và thiết kế yêu cầu\BTL\QUAN_LY_KHO_HANG_XUAT_NHAP_KHAU\QLKHXNK\QLKHXNK\obj\Debug\QLKHXNK.csproj.Up2Date
 D:\code\ky_I_nam_3\Phân tích và thiết kế yêu cầu\BTL\QUAN_LY_KHO_HANG_XUAT_NHAP_KHAU\QLKHXNK\QLKHXNK\obj\Debug\QLKHXNK.Views.Admin.USChiTietPhieuXuat.resources
+D:\code\ky_I_nam_3\Phân tích và thiết kế yêu cầu\BTL\QUAN_LY_KHO_HANG_XUAT_NHAP_KHAU\QLKHXNK\QLKHXNK\obj\Debug\QLKHXNK.Views.Admin.USBaoCao.resources
+D:\code\ky_I_nam_3\Phân tích và thiết kế yêu cầu\BTL\QUAN_LY_KHO_HANG_XUAT_NHAP_KHAU\QLKHXNK\QLKHXNK\obj\Debug\QLKHXNK.Views.Admin.USNhapHang.resources

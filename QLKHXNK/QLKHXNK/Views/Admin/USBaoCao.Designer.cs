@@ -122,6 +122,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -150,7 +151,7 @@
             // 
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(102, 115);
+            this.comboBox1.Location = new System.Drawing.Point(102, 113);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(170, 25);
             this.comboBox1.TabIndex = 2;
