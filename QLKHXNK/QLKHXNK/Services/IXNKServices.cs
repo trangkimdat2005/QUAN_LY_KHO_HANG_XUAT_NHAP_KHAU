@@ -9,30 +9,18 @@ namespace QLKHXNK.Services
 {
     public interface IXNKServices
     {
-        List<HangHoa> DSHangHoa();
-        List<NhaCungCap> DSNhaCungCap();
-        List<NhanVien> DSNhanVien();
-        List<KhachHang> DSKhachHang();
-        List<Kho> DSKho();
-        List<PhieuNhap> DSPhieuNhap();
-        List<ChiTietPhieuNhap> DSChiTietPhieuNhap();
-        List<PhieuXuat> DSPhieuXuat();
-        List<ChiTietPhieuXuat> DSChiTietPhieuXuat();
-        List<BaoCao> DSBaoCao();
+        T GetById<T>(String id) where T : class;
+        bool Add<T>(T entity) where T : class;
+        bool Update<T>(T entity) where T : class;
+        bool Delete<T>(T entity) where T : class;
+        List<T> GetAll<T>() where T : class;
+        bool SoftDelete<T>(T entity) where T : class;
 
 
-        //--------------------------------------------------------
 
 
-        HangHoa GetHangHoa(string MaHH);
-        NhaCungCap GetNhaCungCap(string MaNCC);
-        NhanVien GetNhanVien(string MaNV);
-        KhachHang GetKhachHang(string MaKH);
-        Kho GetKho(string MaKho);
-        PhieuNhap GetPhieuNhap(string MaPN);
-        ChiTietPhieuNhap GetChiTietPhieuNhap(string MaPN, string MaHH);
-        PhieuXuat GetPhieuXuat(string MaPX);
-        ChiTietPhieuXuat GetChiTietPhieuXuat(string MaPX, string MaHH);
-        BaoCao GetBaoCao(string MaBC);
+
+        ChiTietPhieuNhap GetChiTietPhieuNhapByIds(string soPhieuNhap, string maHangHoa);
+        ChiTietPhieuXuat GetChiTietPhieuXuatByIds(string soPhieuXuat, string maHangHoa);
     }
 }

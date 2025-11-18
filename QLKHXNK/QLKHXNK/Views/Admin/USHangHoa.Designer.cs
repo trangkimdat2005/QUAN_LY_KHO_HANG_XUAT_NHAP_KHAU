@@ -29,45 +29,34 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.numericUpDownSoLuongTon = new System.Windows.Forms.NumericUpDown();
+            this.textBoxXuatXu = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBoxDonViTinh = new System.Windows.Forms.ComboBox();
+            this.textBoxTenHH = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxMaHH = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoLuongTon)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.tableLayoutPanel4);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
@@ -77,86 +66,8 @@
             this.panel1.Size = new System.Drawing.Size(1191, 177);
             this.panel1.TabIndex = 1;
             // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.29083F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.70918F));
-            this.tableLayoutPanel4.Controls.Add(this.comboBox4, 1, 2);
-            this.tableLayoutPanel4.Controls.Add(this.label8, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label10, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.textBox6, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.textBox5, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(584, 12);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tableLayoutPanel4.RowCount = 3;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(280, 152);
-            this.tableLayoutPanel4.TabIndex = 11;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(107, 115);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(170, 25);
-            this.comboBox4.TabIndex = 3;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 66);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 17);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Đơn giá bán";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 117);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 17);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Trạng thái:";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox6.Location = new System.Drawing.Point(107, 12);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(170, 25);
-            this.textBox6.TabIndex = 6;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox5.Location = new System.Drawing.Point(107, 62);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(170, 25);
-            this.textBox5.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 17);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Đơn giá nhập:";
-            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
@@ -166,31 +77,19 @@
             this.panel2.Size = new System.Drawing.Size(92, 177);
             this.panel2.TabIndex = 10;
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.LightBlue;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button4.Location = new System.Drawing.Point(9, 141);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 30);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Chi tiết";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.LightBlue;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button3.Location = new System.Drawing.Point(9, 96);
+            this.button3.Location = new System.Drawing.Point(9, 120);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 30);
+            this.button3.Size = new System.Drawing.Size(75, 50);
             this.button3.TabIndex = 2;
             this.button3.Text = "Xoá";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -198,12 +97,13 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.Location = new System.Drawing.Point(9, 51);
+            this.button2.Location = new System.Drawing.Point(9, 63);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 30);
+            this.button2.Size = new System.Drawing.Size(75, 50);
             this.button2.TabIndex = 1;
             this.button2.Text = "Sửa";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -213,7 +113,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.Location = new System.Drawing.Point(9, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
+            this.button1.Size = new System.Drawing.Size(75, 50);
             this.button1.TabIndex = 0;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = false;
@@ -224,49 +124,41 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.29083F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.70918F));
-            this.tableLayoutPanel2.Controls.Add(this.comboBox2, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox3, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox7, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.numericUpDownSoLuongTon, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.textBoxXuatXu, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel2.Location = new System.Drawing.Point(298, 12);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(280, 152);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(280, 101);
             this.tableLayoutPanel2.TabIndex = 8;
             // 
-            // comboBox2
+            // numericUpDownSoLuongTon
             // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(107, 115);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(170, 25);
-            this.comboBox2.TabIndex = 6;
+            this.numericUpDownSoLuongTon.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.numericUpDownSoLuongTon.Location = new System.Drawing.Point(107, 63);
+            this.numericUpDownSoLuongTon.Maximum = new decimal(new int[] {
+            268435455,
+            1042612833,
+            542101086,
+            0});
+            this.numericUpDownSoLuongTon.Name = "numericUpDownSoLuongTon";
+            this.numericUpDownSoLuongTon.Size = new System.Drawing.Size(170, 25);
+            this.numericUpDownSoLuongTon.TabIndex = 12;
             // 
-            // comboBox3
+            // textBoxXuatXu
             // 
-            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(107, 14);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(170, 25);
-            this.comboBox3.TabIndex = 8;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox7.Location = new System.Drawing.Point(107, 62);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(170, 25);
-            this.textBox7.TabIndex = 5;
+            this.textBoxXuatXu.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxXuatXu.Location = new System.Drawing.Point(107, 12);
+            this.textBoxXuatXu.Name = "textBoxXuatXu";
+            this.textBoxXuatXu.Size = new System.Drawing.Size(170, 25);
+            this.textBoxXuatXu.TabIndex = 6;
             // 
             // label5
             // 
@@ -274,41 +166,31 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 16);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 17);
+            this.label5.Size = new System.Drawing.Size(55, 17);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Kho:";
+            this.label5.Text = "Xuất xứ:";
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 66);
+            this.label6.Location = new System.Drawing.Point(3, 67);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 17);
             this.label6.TabIndex = 1;
             this.label6.Text = "Số lượng tồn:";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 117);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Nhà cung cấp:";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.78571F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.21429F));
-            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.comboBoxDonViTinh, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxTenHH, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxMaHH, 1, 0);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -321,22 +203,26 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(280, 152);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // comboBox1
+            // comboBoxDonViTinh
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(105, 115);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(170, 25);
-            this.comboBox1.TabIndex = 2;
+            this.comboBoxDonViTinh.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.comboBoxDonViTinh.FormattingEnabled = true;
+            this.comboBoxDonViTinh.Items.AddRange(new object[] {
+            "Thùng",
+            "Hộp",
+            "Pallet"});
+            this.comboBoxDonViTinh.Location = new System.Drawing.Point(105, 113);
+            this.comboBoxDonViTinh.Name = "comboBoxDonViTinh";
+            this.comboBoxDonViTinh.Size = new System.Drawing.Size(170, 25);
+            this.comboBoxDonViTinh.TabIndex = 2;
             // 
-            // textBox2
+            // textBoxTenHH
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox2.Location = new System.Drawing.Point(105, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 25);
-            this.textBox2.TabIndex = 5;
+            this.textBoxTenHH.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxTenHH.Location = new System.Drawing.Point(105, 62);
+            this.textBoxTenHH.Name = "textBoxTenHH";
+            this.textBoxTenHH.Size = new System.Drawing.Size(170, 25);
+            this.textBoxTenHH.TabIndex = 5;
             // 
             // label1
             // 
@@ -368,14 +254,14 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Đơn vị tính:";
             // 
-            // textBox1
+            // textBoxMaHH
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(105, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(170, 25);
-            this.textBox1.TabIndex = 4;
+            this.textBoxMaHH.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxMaHH.Location = new System.Drawing.Point(105, 12);
+            this.textBoxMaHH.Name = "textBoxMaHH";
+            this.textBoxMaHH.ReadOnly = true;
+            this.textBoxMaHH.Size = new System.Drawing.Size(170, 25);
+            this.textBoxMaHH.TabIndex = 4;
             // 
             // groupBox1
             // 
@@ -402,6 +288,7 @@
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // USHangHoa
             // 
@@ -414,11 +301,10 @@
             this.Size = new System.Drawing.Size(1191, 652);
             this.Load += new System.EventHandler(this.USHangHoa_Load);
             this.panel1.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoLuongTon)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -430,32 +316,22 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBoxDonViTinh;
+        private System.Windows.Forms.TextBox textBoxTenHH;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxMaHH;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxXuatXu;
+        private System.Windows.Forms.NumericUpDown numericUpDownSoLuongTon;
     }
 }

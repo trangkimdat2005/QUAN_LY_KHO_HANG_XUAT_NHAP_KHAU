@@ -21,10 +21,7 @@ namespace QLKHXNK.Models.Entities
 
         public int SoLuong { get; set; }
 
-        public decimal DonGiaXuat { get; set; }
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public decimal? ThanhTien { get; set; }
+        public bool isDelete { get; set; }
 
         public virtual HangHoa HangHoa { get; set; }
 

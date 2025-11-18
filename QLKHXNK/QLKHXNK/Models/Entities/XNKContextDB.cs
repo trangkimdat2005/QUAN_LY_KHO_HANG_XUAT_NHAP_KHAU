@@ -8,11 +8,10 @@ namespace QLKHXNK.Models.Entities
     public partial class XNKContextDB : DbContext
     {
         public XNKContextDB()
-            : base("name=XNKContextDB")
+            : base("name=XNKContextDB4")
         {
         }
 
-        public virtual DbSet<BaoCao> BaoCaos { get; set; }
         public virtual DbSet<ChiTietPhieuNhap> ChiTietPhieuNhaps { get; set; }
         public virtual DbSet<ChiTietPhieuXuat> ChiTietPhieuXuats { get; set; }
         public virtual DbSet<HangHoa> HangHoas { get; set; }
@@ -22,19 +21,11 @@ namespace QLKHXNK.Models.Entities
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<PhieuNhap> PhieuNhaps { get; set; }
         public virtual DbSet<PhieuXuat> PhieuXuats { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<ThongKe> ThongKes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<BaoCao>()
-                .Property(e => e.MaBC)
-                .IsFixedLength()
-                .IsUnicode(false);
-
-            modelBuilder.Entity<BaoCao>()
-                .Property(e => e.MaNV)
-                .IsFixedLength()
-                .IsUnicode(false);
-
             modelBuilder.Entity<ChiTietPhieuNhap>()
                 .Property(e => e.MaPN)
                 .IsFixedLength()
@@ -44,10 +35,6 @@ namespace QLKHXNK.Models.Entities
                 .Property(e => e.MaHH)
                 .IsFixedLength()
                 .IsUnicode(false);
-
-            modelBuilder.Entity<ChiTietPhieuNhap>()
-                .Property(e => e.ThanhTien)
-                .HasPrecision(29, 2);
 
             modelBuilder.Entity<ChiTietPhieuXuat>()
                 .Property(e => e.MaPX)
@@ -59,22 +46,8 @@ namespace QLKHXNK.Models.Entities
                 .IsFixedLength()
                 .IsUnicode(false);
 
-            modelBuilder.Entity<ChiTietPhieuXuat>()
-                .Property(e => e.ThanhTien)
-                .HasPrecision(29, 2);
-
             modelBuilder.Entity<HangHoa>()
                 .Property(e => e.MaHH)
-                .IsFixedLength()
-                .IsUnicode(false);
-
-            modelBuilder.Entity<HangHoa>()
-                .Property(e => e.MaNCC)
-                .IsFixedLength()
-                .IsUnicode(false);
-
-            modelBuilder.Entity<HangHoa>()
-                .Property(e => e.MaKho)
                 .IsFixedLength()
                 .IsUnicode(false);
 
@@ -161,27 +134,12 @@ namespace QLKHXNK.Models.Entities
                 .IsUnicode(false);
 
             modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.BaoCaos)
-                .WithRequired(e => e.NhanVien)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.PhieuNhaps)
-                .WithRequired(e => e.NhanVien)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.PhieuXuats)
-                .WithRequired(e => e.NhanVien)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<PhieuNhap>()
-                .Property(e => e.MaPN)
+                .Property(e => e.MaKho)
                 .IsFixedLength()
                 .IsUnicode(false);
 
             modelBuilder.Entity<PhieuNhap>()
-                .Property(e => e.MaNV)
+                .Property(e => e.MaPN)
                 .IsFixedLength()
                 .IsUnicode(false);
 
@@ -201,17 +159,22 @@ namespace QLKHXNK.Models.Entities
                 .IsUnicode(false);
 
             modelBuilder.Entity<PhieuXuat>()
-                .Property(e => e.MaNV)
-                .IsFixedLength()
-                .IsUnicode(false);
-
-            modelBuilder.Entity<PhieuXuat>()
                 .Property(e => e.MaKH)
                 .IsFixedLength()
                 .IsUnicode(false);
 
             modelBuilder.Entity<PhieuXuat>()
                 .Property(e => e.MaKho)
+                .IsFixedLength()
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ThongKe>()
+                .Property(e => e.MaKho)
+                .IsFixedLength()
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ThongKe>()
+                .Property(e => e.MaHH)
                 .IsFixedLength()
                 .IsUnicode(false);
         }
