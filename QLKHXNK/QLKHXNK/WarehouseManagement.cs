@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace QLKHXNK
 {
-    public partial class Form2 : Form
+    public partial class index : Form
     {
 
         [DllImport("user32.dll")]
@@ -22,7 +22,7 @@ namespace QLKHXNK
         private const int SB_VERT = 1;
 
 
-        public Form2()
+        public index()
         {
             InitializeComponent();
         }
@@ -106,6 +106,26 @@ namespace QLKHXNK
         private void button11_Click(object sender, EventArgs e)
         {
             OpenChildUserControl(new USNhapHang());
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            OpenChildUserControl(new USXuatHang());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            OpenChildUserControl(new USThongKe());
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

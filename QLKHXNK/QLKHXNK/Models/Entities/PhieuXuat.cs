@@ -24,10 +24,6 @@ namespace QLKHXNK.Models.Entities
 
         [Required]
         [StringLength(10)]
-        public string MaNV { get; set; }
-
-        [Required]
-        [StringLength(10)]
         public string MaKH { get; set; }
 
         [Required]
@@ -36,10 +32,10 @@ namespace QLKHXNK.Models.Entities
 
         public int? TongSoLuong { get; set; }
 
-        public decimal? TongGiaTri { get; set; }
-
         [StringLength(200)]
         public string GhiChu { get; set; }
+
+        public bool isDelete { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuXuat> ChiTietPhieuXuats { get; set; }
@@ -47,7 +43,5 @@ namespace QLKHXNK.Models.Entities
         public virtual KhachHang KhachHang { get; set; }
 
         public virtual Kho Kho { get; set; }
-
-        public virtual NhanVien NhanVien { get; set; }
     }
 }

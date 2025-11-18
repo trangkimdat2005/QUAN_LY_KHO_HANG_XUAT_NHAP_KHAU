@@ -12,9 +12,10 @@ namespace QLKHXNK.Models.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Kho()
         {
-            HangHoas = new HashSet<HangHoa>();
+            NhanViens = new HashSet<NhanVien>();
             PhieuNhaps = new HashSet<PhieuNhap>();
             PhieuXuats = new HashSet<PhieuXuat>();
+            ThongKes = new HashSet<ThongKe>();
         }
 
         [Key]
@@ -25,13 +26,15 @@ namespace QLKHXNK.Models.Entities
         [StringLength(100)]
         public string TenKho { get; set; }
 
+        [Required]
         [StringLength(200)]
         public string DiaChi { get; set; }
 
-        public decimal? DienTich { get; set; }
+        public decimal DienTich { get; set; }
 
-        public int? SucChua { get; set; }
+        public int SucChua { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string LoaiKho { get; set; }
 
@@ -41,13 +44,18 @@ namespace QLKHXNK.Models.Entities
         [StringLength(200)]
         public string GhiChu { get; set; }
 
+        public bool isDelete { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HangHoa> HangHoas { get; set; }
+        public virtual ICollection<NhanVien> NhanViens { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuNhap> PhieuNhaps { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuXuat> PhieuXuats { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ThongKe> ThongKes { get; set; }
     }
 }

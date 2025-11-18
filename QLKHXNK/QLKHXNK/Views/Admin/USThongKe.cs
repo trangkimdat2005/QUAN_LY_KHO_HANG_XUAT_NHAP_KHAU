@@ -1,4 +1,5 @@
-﻿using QLKHXNK.Services;
+﻿using QLKHXNK.Models.Entities;
+using QLKHXNK.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,29 +12,30 @@ using System.Windows.Forms;
 
 namespace QLKHXNK.Views.Admin
 {
-    public partial class USBaoCao : UserControl
+    public partial class USThongKe : UserControl
     {
         private readonly IXNKServices _xnkServices;
-        public USBaoCao()
+        public USThongKe()
         {
             InitializeComponent();
             _xnkServices = new XNKServices();
         }
 
-        private void USBaoCao_Load(object sender, EventArgs e)
+        private void USThongKe_Load(object sender, EventArgs e)
         {
-            listView1.Columns.Add("Mã hàng");
-            listView1.Columns.Add("Tên hàng");
-            listView1.Columns.Add("Đơn vị");
-            listView1.Columns.Add("Giá bán");
-            listView1.Columns.Add("Số lượng");
-            listView1.Columns.Add("Trạng thái");
+            listView1.Columns.Add("Kho");
+            listView1.Columns.Add("Hàng hoá");
+            listView1.Columns.Add("Tháng");
+            listView1.Columns.Add("Năm");
+            listView1.Columns.Add("Số lượng nhập");
+            listView1.Columns.Add("Số lượng xuất");
+            listView1.Columns.Add("Tồn kho");
+            listView1.Columns.Add("Ghi chú");
 
             LoadListViewData();
             AdjustListViewColumns(listView1);
         }
 
-        // Điều chỉnh chiều rộng các cột khi kích thước ListView thay đổi
         private void AdjustListViewColumns(ListView listView)
         {
             if (listView.Columns.Count == 0) return;
@@ -54,24 +56,21 @@ namespace QLKHXNK.Views.Admin
             listView1.Items.Clear();
 
             // Ví dụ danh sách hàng hóa
-            var dsHangHoa = _xnkServices.DSHangHoa();
+            var dsThongKe = _xnkServices.GetAll<ThongKe>();
 
             // Duyệt danh sách để thêm từng dòng
-            foreach (var hh in dsHangHoa)
+            foreach (var tk in dsThongKe)
             {
-                ListViewItem item = new ListViewItem(hh.MaHH);
-                item.SubItems.Add(hh.TenHH);
-                item.SubItems.Add(hh.DonViTinh);
-                item.SubItems.Add(hh.DonGiaBan.ToString());
-                item.SubItems.Add(hh.SoLuongTon.ToString());
-                item.SubItems.Add(hh.TrangThai);
+                ListViewItem item = new ListViewItem(_xnkServices.GetById<Kho>(tk.MaKho).TenKho);
+                item.SubItems.Add(_xnkServices.GetById<HangHoa>(tk.MaHH).TenHH);
+                item.SubItems.Add(tk.Thang.ToString());
+                item.SubItems.Add(tk.Nam.ToString());
+                item.SubItems.Add(tk.SoLuongNhap.ToString());
+                item.SubItems.Add(tk.SoLuongXuat.ToString());
+                item.SubItems.Add(tk.SoLuongTon.ToString());
+                item.SubItems.Add(tk.GhiChu);
                 listView1.Items.Add(item);
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using QLKHXNK.Services;
+﻿using QLKHXNK.Models.Entities;
+using QLKHXNK.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,10 +28,10 @@ namespace QLKHXNK.Views.Admin
             listView1.Columns.Add("Mã hàng");
             listView1.Columns.Add("Tên hàng");
             listView1.Columns.Add("Đơn vị");
-            listView1.Columns.Add("Giá bán");
+            listView1.Columns.Add("Xuất xứ");
             listView1.Columns.Add("Số lượng");
-            listView1.Columns.Add("Trạng thái");
 
+            cleanText();
             LoadListViewData();
             AdjustListViewColumns(listView1);
         }
@@ -56,7 +57,7 @@ namespace QLKHXNK.Views.Admin
             listView1.Items.Clear();
 
             // Ví dụ danh sách hàng hóa
-            var dsHangHoa = _xnkServices.DSHangHoa();
+            var dsHangHoa = _xnkServices.GetAll<HangHoa>();
 
             // Duyệt danh sách để thêm từng dòng
             foreach (var hh in dsHangHoa)
@@ -64,16 +65,157 @@ namespace QLKHXNK.Views.Admin
                 ListViewItem item = new ListViewItem(hh.MaHH);
                 item.SubItems.Add(hh.TenHH);
                 item.SubItems.Add(hh.DonViTinh);
-                item.SubItems.Add(hh.DonGiaBan.ToString());
+                item.SubItems.Add(hh.XuatXu);
                 item.SubItems.Add(hh.SoLuongTon.ToString());
-                item.SubItems.Add(hh.TrangThai);
                 listView1.Items.Add(item);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                HangHoa newHangHoa = new HangHoa
+                {
+                    MaHH = textBoxMaHH.Text,
+                    TenHH = textBoxTenHH.Text,
+                    DonViTinh = comboBoxDonViTinh.Text,
+                    XuatXu = textBoxXuatXu.Text,
+                    SoLuongTon = (int)numericUpDownSoLuongTon.Value
+                };
+                if (_xnkServices.Add<HangHoa>(newHangHoa))
+                {
+                    MessageBox.Show("Thêm hàng hoá thành công!", "Success");
+                    LoadListViewData();
+                    AdjustListViewColumns(listView1);
+                    cleanText();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm hàng hoá thất bại!", "Error");
+                }
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi thêm hàng hoá: " + ex.Message, "Error");
+            }
+        }
+
+        private string GetNextId()
+        {
+            using (var db = new XNKContextDB())
+            {
+                // Lấy bản ghi có Id lớn nhất hiện có 
+                var last = db.HangHoas
+                             .OrderByDescending(p => p.MaHH)
+                             .FirstOrDefault();
+
+                if (last == null)
+                    return "HH00001";
+
+                // Cắt phần số phía sau
+                string numberPart = last.MaHH.Substring(2);
+                int number = int.Parse(numberPart) + 1;
+                return $"HH{number:D5}";
+            }
+        }
+        private void cleanText()
+        {
+            textBoxMaHH.Text = GetNextId();
+            textBoxTenHH.Text = "";
+            comboBoxDonViTinh.Text = "";
+            textBoxXuatXu.Text = "";
+            numericUpDownSoLuongTon.Value = 0;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                HangHoa updatedHangHoa = new HangHoa
+                {
+                    MaHH = textBoxMaHH.Text,
+                    TenHH = textBoxTenHH.Text,
+                    DonViTinh = comboBoxDonViTinh.Text,
+                    XuatXu = textBoxXuatXu.Text,
+                    SoLuongTon = (int)numericUpDownSoLuongTon.Value
+                };
+
+                HangHoa hangHoaToUpdate = _xnkServices.GetById<HangHoa>(updatedHangHoa.MaHH);
+                hangHoaToUpdate.TenHH = updatedHangHoa.TenHH;
+                hangHoaToUpdate.DonViTinh = updatedHangHoa.DonViTinh;
+                hangHoaToUpdate.XuatXu = updatedHangHoa.XuatXu;
+                hangHoaToUpdate.SoLuongTon = updatedHangHoa.SoLuongTon;
+
+                if (_xnkServices.Update<HangHoa>(hangHoaToUpdate))
+                {
+                    MessageBox.Show("Cập nhật hàng hoá thành công!", "Success");
+                    LoadListViewData();
+                    AdjustListViewColumns(listView1);
+                    cleanText();
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật hàng hoá thất bại!", "Error");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật hàng hoá: " + ex.Message, "Error");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn hàng hoá để xoá!");
+                return;
+            }
+            try
+            {
+                HangHoa hangHoaToDelete = _xnkServices.GetById<HangHoa>(textBoxMaHH.Text);
+                if (_xnkServices.Delete<HangHoa>(hangHoaToDelete))
+                {
+                    MessageBox.Show("Xoá hàng hoá thành công!", "Success");
+                    LoadListViewData();
+                    AdjustListViewColumns(listView1);
+                    cleanText();
+                }
+                else if (_xnkServices.SoftDelete<HangHoa>(hangHoaToDelete))
+                {
+                    MessageBox.Show("Xoá hàng hoá thành công!", "Success");
+                    LoadListViewData();
+                    AdjustListViewColumns(listView1);
+                    cleanText();
+                }
+                else
+                {
+                    MessageBox.Show("Xoá hàng hoá thất bại!", "Error");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xoá hàng hoá: " + ex.Message, "Error");
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                cleanText();
+                return;
+            }
+            else
+            {
+                textBoxMaHH.Text = listView1.SelectedItems[0].SubItems[0].Text;
+                textBoxTenHH.Text = listView1.SelectedItems[0].SubItems[1].Text;
+                comboBoxDonViTinh.Text = listView1.SelectedItems[0].SubItems[2].Text;
+                textBoxXuatXu.Text = listView1.SelectedItems[0].SubItems[3].Text;
+                numericUpDownSoLuongTon.Value = int.Parse(listView1.SelectedItems[0].SubItems[4].Text);
+            }
         }
     }
 }
